@@ -7,6 +7,8 @@
 //
 
 #import "VNMViewController.h"
+#import <Parse/Parse.h>
+#import "Location.h"
 
 @interface VNMViewController () {
     //CLLocationManager allows us to get our location
@@ -72,6 +74,7 @@
     if (currentLocation != nil) {
         self.longitudeValueLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         self.latitudeValueLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        
     }
     
     //Stop LocationManager
@@ -89,6 +92,5 @@
         }
     }];
 }
-
 
 @end

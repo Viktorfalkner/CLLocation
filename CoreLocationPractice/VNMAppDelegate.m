@@ -7,11 +7,16 @@
 //
 
 #import "VNMAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation VNMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"0WP22pd5iG1vmLORh9BvKbX81yb85t3PTahlCuxR"
+                  clientKey:@"SWZXxYIaIzD2vTrPRQd5TpbJsJFghhkGjNPkb9PX"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
     return YES;
 }
