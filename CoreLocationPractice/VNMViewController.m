@@ -62,6 +62,17 @@
     [errorAlert show];
 }
 
+- (void)createLocationObject:(CLLocation *)currentLocation
+{
+    NSNumber *latitudeLocation = [NSNumber numberWithFloat:currentLocation.coordinate.latitude];
+    NSNumber *longitudeLocation = [NSNumber numberWithFloat:currentLocation.coordinate.longitude];
+    NSString *meetingName = @"Marcus' Mom's House";
+    
+    Location *newLocation = [[Location alloc]initWithMeetingName:meetingName withLatidue:latitudeLocation withLongitude:longitudeLocation];
+    
+    [Location sendLocationToParse:newLocation];
+}
+
 -(void)locationManager:(CLLocationManager *)manager
    didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation
@@ -74,6 +85,9 @@
     if (currentLocation != nil) {
         self.longitudeValueLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         self.latitudeValueLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        
+        [self createLocationObject:currentLocation];
+        
         
     }
     

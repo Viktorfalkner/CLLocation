@@ -7,6 +7,8 @@
 //
 
 #import "Location.h"
+#import<Parse/Parse.h>
+
 
 @implementation Location
 
@@ -24,6 +26,17 @@
     }
     return self;
 
+}
+
++(void)sendLocationToParse:(Location *)newLocation
+{
+    PFObject *locationToStore = [PFObject objectWithClassName:@"CLLocation"];
+    locationToStore[@"meetingName"] = newLocation.meetingName ;
+    locationToStore[@"longitudeValue"] = newLocation.longitude;
+    locationToStore[@"latitudeValue"] = newLocation.latitude;
+    
+    [locationToStore saveInBackground];
+    
 }
 
 @end

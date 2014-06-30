@@ -17,6 +17,9 @@
 		3BCAE1F71960D02200778A7E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCAE1F61960D02200778A7E /* StoreKit.framework */; };
 		3BCAE1F91960D02E00778A7E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCAE1F81960D02E00778A7E /* SystemConfiguration.framework */; };
 		3BCAE1FD1960D56C00778A7E /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCAE1FC1960D56C00778A7E /* Location.m */; };
+		77241E361960E1550067549A /* VNMLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77241E351960E1550067549A /* VNMLocationTableViewController.m */; };
+		77241E391960E8BE0067549A /* VNMMapLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77241E381960E8BE0067549A /* VNMMapLocationViewController.m */; };
+		77241E3B1960EA950067549A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77241E3A1960EA950067549A /* MapKit.framework */; };
 		F8B0A8C119607DEC001AA84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B0A8C019607DEC001AA84C /* Foundation.framework */; };
 		F8B0A8C319607DEC001AA84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B0A8C219607DEC001AA84C /* CoreGraphics.framework */; };
 		F8B0A8C519607DEC001AA84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B0A8C419607DEC001AA84C /* UIKit.framework */; };
@@ -56,6 +59,11 @@
 		3BCAE1F81960D02E00778A7E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3BCAE1FB1960D56C00778A7E /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3BCAE1FC1960D56C00778A7E /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		77241E341960E1550067549A /* VNMLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNMLocationTableViewController.h; sourceTree = "<group>"; };
+		77241E351960E1550067549A /* VNMLocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNMLocationTableViewController.m; sourceTree = "<group>"; };
+		77241E371960E8BE0067549A /* VNMMapLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNMMapLocationViewController.h; sourceTree = "<group>"; };
+		77241E381960E8BE0067549A /* VNMMapLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNMMapLocationViewController.m; sourceTree = "<group>"; };
+		77241E3A1960EA950067549A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F8B0A8BD19607DEC001AA84C /* CoreLocationPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLocationPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B0A8C019607DEC001AA84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8B0A8C219607DEC001AA84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B0A8F619608162001AA84C /* CoreLocation.framework in Frameworks */,
+				77241E3B1960EA950067549A /* MapKit.framework in Frameworks */,
 				3BCAE1F91960D02E00778A7E /* SystemConfiguration.framework in Frameworks */,
 				3BCAE1F71960D02200778A7E /* StoreKit.framework in Frameworks */,
 				3BCAE1F51960D01900778A7E /* Security.framework in Frameworks */,
@@ -92,7 +102,6 @@
 				3BCAE1ED1960CFD400778A7E /* CFNetwork.framework in Frameworks */,
 				3BCAE1EB1960CFB000778A7E /* AudioToolbox.framework in Frameworks */,
 				3BCAE1E91960CF3300778A7E /* Parse.framework in Frameworks */,
-				F8B0A8F619608162001AA84C /* CoreLocation.framework in Frameworks */,
 				F8B0A8C319607DEC001AA84C /* CoreGraphics.framework in Frameworks */,
 				F8B0A8C519607DEC001AA84C /* UIKit.framework in Frameworks */,
 				F8B0A8C119607DEC001AA84C /* Foundation.framework in Frameworks */,
@@ -117,6 +126,10 @@
 			children = (
 				F8B0A8D519607DEC001AA84C /* VNMViewController.h */,
 				F8B0A8D619607DEC001AA84C /* VNMViewController.m */,
+				77241E341960E1550067549A /* VNMLocationTableViewController.h */,
+				77241E351960E1550067549A /* VNMLocationTableViewController.m */,
+				77241E371960E8BE0067549A /* VNMMapLocationViewController.h */,
+				77241E381960E8BE0067549A /* VNMMapLocationViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +158,7 @@
 		F8B0A8BF19607DEC001AA84C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77241E3A1960EA950067549A /* MapKit.framework */,
 				3BCAE1F81960D02E00778A7E /* SystemConfiguration.framework */,
 				3BCAE1F61960D02200778A7E /* StoreKit.framework */,
 				3BCAE1F41960D01900778A7E /* Security.framework */,
@@ -305,7 +319,9 @@
 			files = (
 				F8B0A8D119607DEC001AA84C /* VNMAppDelegate.m in Sources */,
 				F8B0A8CD19607DEC001AA84C /* main.m in Sources */,
+				77241E391960E8BE0067549A /* VNMMapLocationViewController.m in Sources */,
 				3BCAE1FD1960D56C00778A7E /* Location.m in Sources */,
+				77241E361960E1550067549A /* VNMLocationTableViewController.m in Sources */,
 				F8B0A8D719607DEC001AA84C /* VNMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

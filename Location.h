@@ -16,4 +16,9 @@
 
 -(instancetype)initWithMeetingName:(NSString *)meetingName withLatidue:(NSNumber *)latitude withLongitude:(NSNumber *)longitude;
 
+
++(void)sendLocationToParse:(Location *)newLocation;
+
+
+
 @end
